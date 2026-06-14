@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asociados - Hospital Militar Dr. Manuel Siverio Castillo</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <style>
+    .asociados-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    .asociado-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,31,63,0.12);
+      margin-bottom: 3rem;
+      overflow: hidden;
+      border-top: 5px solid #001f3f;
+    }
+    .asociado-header {
+      background: #001f3f;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .asociado-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 12px;
+      padding: 8px;
+      flex-shrink: 0;
+    }
+    .asociado-logo-placeholder {
+      width: 100px;
+      height: 100px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      border: 2px dashed rgba(255,255,255,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+    }
+    .asociado-header-info h2 {
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .asociado-header-info p {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+    }
+    .asociado-body {
+      padding: 2.5rem;
+    }
+    .asociado-body p {
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+      font-size: 0.97rem;
+    }
+    .servicios-titulo {
+      color: #001f3f;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 2rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #d4af37;
+    }
+    .servicios-lista {
+      list-style: none;
+      padding: 0;
+    }
+    .servicios-lista li {
+      padding: 1rem 1.2rem;
+      margin-bottom: 0.8rem;
+      border-radius: 10px;
+      background: #f4f4f4;
+      border-left: 4px solid #001f3f;
+      color: #333;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .servicios-lista li strong {
+      color: #001f3f;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .nota-box {
+      background: #e8f4fd;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      border-left: 4px solid #2980b9;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: #1a5276;
+      line-height: 1.7;
+    }
+    .nota-box strong {
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header style="background:#fff;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:5px solid #001f3f;box-shadow:0 2px 10px rgba(0,0,0,0.1)">
+    <img src="./img/logo-direccion.png" style="height:75px;width:auto;object-fit:contain;">
+    <div style="text-align:center">
+      <h2 style="color:#001f3f;font-size:1.8rem;font-weight:700;">Hospital Militar Tipo 1 Dr. Manuel Siverio Castillo</h2>
+    </div>
+    <img src="./img/logo-hospital.png" style="height:75px;width:auto;object-fit:contain;">
+  </header>
+
+  <nav style="background:#001f3f;padding:0.8rem 2rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap">
+    <a href="./index.html" style="color:#fff;text-decoration:none;font-weight:600;font-size:0.88rem;text-transform:uppercase;letter-spacing:0.1em">Inicio</a>
+    <a href="./especialidades.html" style="color:#fff;text-decoration:none;font-weight:600;font-size:0.88rem;text-transform:uppercase;letter-spacing:0.1em">Directorio Médico</a>
+    <a href="./guia-admision.html" style="color:#fff;text-decoration:none;font-weight:600;font-size:0.88rem;text-transform:uppercase;letter-spacing:0.1em">Guía de Admisión</a>
+    <a href="./linea-mando.html" style="color:#fff;text-decoration:none;font-weight:600;font-size:0.88rem;text-transform:uppercase;letter-spacing:0.1em">Línea de Mando</a>
+    <a href="./servicios.html" style="color:#fff;text-decoration:none;font-weight:600;font-size:0.88rem;text-transform:uppercase;letter-spacing:0.1em">Servicios</a>
+    <a href="./asociados.html" style="color:#d4af37;text-decoration:none;font-weight:600;font-size:0.88rem;text-transform:uppercase;letter-spacing:0.1em">Asociados</a>
+  </nav>
+
+  <section style="text-align:center;padding:4rem 2rem;background:linear-gradient(135deg,#001f3f,#003366);color:#fff">
+    <h1 style="font-size:2.2rem;font-weight:700;margin-bottom:0.8rem">Nuestros Asociados</h1>
+    <p style="font-size:1rem;opacity:0.85;max-width:700px;margin:0 auto">Instituciones aliadas que trabajan en sinergia con el Hospital Militar para garantizar una atención integral a nuestro personal.</p>
+  </section>
+
+  <div class="asociados-container">
+
+    <!-- SEGUROS HORIZONTE -->
+    <div class="asociado-card">
+      <div class="asociado-header">
+        <img src="./img/logo-sh.jpeg" alt="Logo Seguros Horizonte" class="asociado-logo">
+        <div class="asociado-header-info">
+          <h2>Seguros Horizonte</h2>
+          <p>Empresa aseguradora del Estado venezolano adscrita al Ministerio del Poder Popular para la Defensa</p>
+        </div>
+      </div>
+      <div class="asociado-body">
+        <p>Seguros Horizonte es la empresa aseguradora del Estado venezolano adscrita al Ministerio del Poder Popular para la Defensa. Su función central es brindar respaldo financiero y protección integral a través de pólizas de seguros. Administra, principalmente, las pólizas de Hospitalización, Cirugía y Maternidad (HCM) del personal de la Fuerza Armada Nacional Bolivariana (FANB), de los trabajadores de la administración pública y de sus familiares, garantizando la cobertura de gastos médicos ante enfermedades, accidentes o emergencias.</p>
+        <p>Seguros Horizonte y el Hospital Militar operan bajo una relación de prestador de salud y ente financiador. Mientras el hospital dispone de la infraestructura, los especialistas y los equipos médicos para tratar a los pacientes, Seguros Horizonte actúa como el mecanismo de póliza que ampara a sus asegurados. Trabajan en sinergia para que el militar o funcionario público reciba la atención médica o quirúrgica necesaria en las instalaciones del hospital, gestionando la cobertura de los gastos para que el paciente tenga acceso a un tratamiento oportuno sin que esto represente un impacto económico imprevisto.</p>
+
+        <h3 class="servicios-titulo">Servicios que Seguros Horizonte articula en el Hospital</h3>
+        <ul class="servicios-lista">
+          <li>
+            <strong>Cobertura de Farmacia y Medicamentos</strong>
+            Seguros Horizonte garantiza a sus asegurados la cobertura financiera para la adquisición de medicamentos recetados durante su atención en el hospital. La aseguradora se encarga de que el paciente reciba el tratamiento farmacológico necesario para su recuperación, tanto en hospitalización como de forma ambulatoria.
+          </li>
+          <li>
+            <strong>Gestión de Hospitalización, Cirugía y Maternidad (HCM)</strong>
+            Tramitación rápida y directa de claves de emergencia, así como la emisión de cartas avales para cirugías electivas o programadas (traumatología, cirugía general, obstetricia, entre otras) que se llevarán a cabo en los quirófanos del recinto hospitalario.
+          </li>
+          <li>
+            <strong>Respaldo para Estudios Especializados</strong>
+            Autorización y cobertura de gastos para exámenes de alto costo que el paciente requiera durante su evaluación en el hospital, tales como tomografías, resonancias magnéticas, ecosonogramas especializados y pruebas de laboratorio de alta complejidad.
+          </li>
+          <li>
+            <strong>Atención al Asegurado</strong>
+            Presencia de analistas o coordinadores de la aseguradora dedicados a agilizar los trámites administrativos, orientar al paciente afiliado y acelerar los procesos de admisión y alta médica dentro del hospital.
+          </li>
+        </ul>
+
+        <div class="nota-box">
+          <strong>Nota sobre la Atención Integral</strong>
+          Mientras Seguros Horizonte enfoca sus servicios exclusivamente en la cobertura de sus clientes con pólizas vigentes (personal militar y funcionarios públicos), el Hospital Militar "Dr. Manuel Siverio Castillo" mantiene en paralelo su compromiso de atención social, recibiendo a la comunidad civil de Guayana a través de sus servicios públicos de salud, independientemente de si poseen o no un seguro.
+        </div>
+      </div>
+    </div>
+
+    <!-- IPSFA -->
+    <div class="asociado-card">
+      <div class="asociado-header">
+        <img src="./img/logo-ipsfa.jpeg" alt="Logo IPSFA" class="asociado-logo">
+        <div class="asociado-header-info">
+          <h2>IPSFA</h2>
+          <p>Instituto de Previsión Social de la Fuerza Armada Nacional Bolivariana</p>
+        </div>
+      </div>
+      <div class="asociado-body">
+        <p>El IPSFA es el organismo del Estado venezolano encargado de administrar, coordinar y garantizar el sistema de seguridad social de la Fuerza Armada Nacional Bolivariana (FANB). Su función central es proteger y elevar la calidad de vida del personal militar (tanto en servicio activo como en situación de retiro) y de sus familiares afiliados, gestionando beneficios socioeconómicos que incluyen pensiones, créditos, bienestar y, de forma prioritaria, el derecho fundamental a la salud.</p>
+        <p>El IPSFA y el Hospital Militar trabajan como una sola red de apoyo. Mientras el IPSFA actúa como el ente administrador que asegura los recursos y derechos de los afiliados, el Hospital Militar es el brazo ejecutor o infraestructura médica donde se materializa ese derecho a la salud. Es el centro neurálgico en la región para que la población militar reciba la atención garantizada por su seguridad social.</p>
+
+        <h3 class="servicios-titulo">Servicios que el IPSFA articula en el Hospital</h3>
+        <ul class="servicios-lista">
+          <li>
+            <strong>Servicio de Farmacia y Suministro de Medicamentos</strong>
+            Es uno de los pilares de la institución. El IPSFA gestiona la dotación de la farmacia para garantizar la entrega de medicamentos a los militares y sus familiares. Esto abarca desde medicinas para tratamientos ambulatorios y hospitalarios, hasta el suministro continuo para patologías crónicas a través de los programas de salud de la fuerza armada.
+          </li>
+          <li>
+            <strong>Cobertura Médica Especializada</strong>
+            Respaldo administrativo y logístico para cubrir consultas médicas, emergencias, intervenciones quirúrgicas, exámenes de laboratorio y servicios de imagenología.
+          </li>
+          <li>
+            <strong>Dotación de Insumos Médico-Quirúrgicos</strong>
+            Apoyo continuo en el suministro de material descartable, equipos y recursos técnicos necesarios para que el personal del hospital pueda operar y atender a los pacientes.
+          </li>
+          <li>
+            <strong>Gestión de Bienestar Social</strong>
+            Coordinación de trámites para la validación de afiliados, autorizaciones para tratamientos de alto costo, entrega de ayudas técnicas (sillas de ruedas, muletas, prótesis) y asistencia socioeconómica directa al paciente militar.
+          </li>
+        </ul>
+
+        <div class="nota-box">
+          <strong>Nota sobre la Atención Civil</strong>
+          Aunque los servicios de previsión social y la farmacia del IPSFA están destinados a la población militar, el Hospital Militar "Dr. Manuel Siverio Castillo" también cumple una labor social al abrir sus puertas para brindar atención médica general a la comunidad civil de la región.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer style="background:#001f3f;color:#fff;text-align:center;padding:2rem;margin-top:2rem">
+    <p>© 2026 Hospital Militar Dr. Manuel Siverio Castillo — Excelencia y Disciplina</p>
+  </footer>
+
+</body>
+</html>

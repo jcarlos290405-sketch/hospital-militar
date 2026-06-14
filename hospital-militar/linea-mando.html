@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Línea de Mando - Hospital Militar Dr. Manuel Siverio Castillo</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <style>
+    .mando-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    .mando-titulo {
+      text-align: center;
+      font-size: 2rem;
+      color: #001f3f;
+      margin-bottom: 3rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      border-bottom: 3px solid #d4af37;
+      padding-bottom: 1rem;
+    }
+    .nivel {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 3rem;
+      margin-bottom: 0;
+      position: relative;
+    }
+    .nivel-single {
+      display: flex;
+      justify-content: center;
+    }
+    .conector {
+      display: flex;
+      justify-content: center;
+      height: 40px;
+    }
+    .conector::before {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 100%;
+      background-color: #d4af37;
+    }
+    .conector-doble {
+      display: flex;
+      justify-content: center;
+      height: 40px;
+      position: relative;
+      width: 60%;
+      margin: 0 auto;
+    }
+    .conector-doble::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background-color: #d4af37;
+    }
+    .conector-doble::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      right: 20%;
+      height: 2px;
+      background-color: #d4af37;
+    }
+    .persona {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 200px;
+    }
+    .persona img {
+      width: 180px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+      border: 3px solid #d4af37;
+      border-bottom: none;
+      display: block;
+    }
+    .persona-info {
+      background-color: #001f3f;
+      color: #fff;
+      padding: 0.8rem 1rem;
+      text-align: center;
+      border-radius: 0 0 8px 8px;
+      width: 180px;
+      border: 3px solid #d4af37;
+      border-top: none;
+    }
+    .persona-nombre {
+      font-weight: 700;
+      font-size: 0.82rem;
+      margin-bottom: 0.3rem;
+      line-height: 1.3;
+    }
+    .persona-cargo {
+      font-size: 0.72rem;
+      opacity: 0.85;
+      line-height: 1.3;
+    }
+    .persona-supremo img {
+      width: 220px;
+      height: 260px;
+    }
+    .persona-supremo .persona-info {
+      width: 220px;
+      background-color: #8B0000;
+      border-color: #d4af37;
+    }
+  </style>
+</head>
+<body>
+
+  <header style="background:#fff;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:5px solid #001f3f;box-shadow:0 2px 10px rgba(0,0,0,0.1)">
+    <img src="./img/logo-direccion.png" style="height:75px;width:auto;object-fit:contain;">
+    <div style="text-align:center">
+      <h2 style="color:#001f3f;font-size:1.8rem;font-weight:700;display:inline">Hospital Militar Tipo 1</h2>
+      <span style="color:#001f3f;font-size:1.8rem;font-weight:700;margin-left:0.5rem"> Dr. Manuel Siverio Castillo</span>
+    </div>
+    <img src="./img/logo-hospital.png" style="height:75px;width:auto;object-fit:contain;">
+  </header>
+
+  <nav style="background:#001f3f;padding:0.8rem 2rem;display:flex;justify-content:center;gap:2rem">
+    <a href="./index.html" style="color:#fff;text-decoration:none;font-weight:600;font-size:0.88rem;text-transform:uppercase;letter-spacing:0.1em">Inicio</a>
+    <a href="./especialidades.html" style="color:#fff;text-decoration:none;font-weight:600;font-size:0.88rem;text-transform:uppercase;letter-spacing:0.1em">Directorio Médico</a>
+    <a href="./guia-admision.html" style="color:#fff;text-decoration:none;font-weight:600;font-size:0.88rem;text-transform:uppercase;letter-spacing:0.1em">Guía de Admisión</a>
+    <a href="./linea-mando.html" style="color:#d4af37;text-decoration:none;font-weight:600;font-size:0.88rem;text-transform:uppercase;letter-spacing:0.1em">Línea de Mando</a>
+  </nav>
+
+  <div class="mando-container">
+    <h2 class="mando-titulo">LÍNEA DE MANDO</h2>
+
+    <!-- NIVEL 1: Chávez -->
+    <div class="nivel-single">
+      <div class="persona persona-supremo">
+        <img src="./img/chavez.jpeg" alt="Hugo Chávez">
+        <div class="persona-info">
+          <div class="persona-nombre">HUGO RAFAEL CHÁVEZ FRÍAS</div>
+          <div class="persona-cargo">Comandante Supremo de la Revolución Bolivariana</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conector"></div>
+
+    <!-- NIVEL 2: Maduro -->
+    <div class="nivel-single">
+      <div class="persona">
+        <img src="./img/maduro.jpeg" alt="Nicolás Maduro">
+        <div class="persona-info">
+          <div class="persona-nombre">NICOLÁS MADURO MOROS</div>
+          <div class="persona-cargo">Presidente Constitucional de la República Bolivariana de Venezuela</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conector"></div>
+
+    <!-- NIVEL 3: Delcy -->
+    <div class="nivel-single">
+      <div class="persona">
+        <img src="./img/delcy.jpeg" alt="Delcy Rodríguez">
+        <div class="persona-info">
+          <div class="persona-nombre">DELCY RODRÍGUEZ</div>
+          <div class="persona-cargo">Presidenta (E) de la República / Comandante en Jefe de la FANB</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conector"></div>
+
+    <!-- NIVEL 4: González López -->
+    <div class="nivel-single">
+      <div class="persona">
+        <img src="./img/gonzalez-lopez.jpeg" alt="Gustavo González López">
+        <div class="persona-info">
+          <div class="persona-nombre">GUSTAVO GONZÁLEZ LOPEZ</div>
+          <div class="persona-cargo">General en Jefe / Ministro del Poder Popular para la Defensa</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conector-doble"></div>
+
+    <!-- NIVEL 5: Prieto y Serrano -->
+    <div class="nivel">
+      <div class="persona">
+        <img src="./img/prieto-martinez.jpeg" alt="Rafael Prieto Martínez">
+        <div class="persona-info">
+          <div class="persona-nombre">RAFAEL DAVID PRIETO MARTÍNEZ</div>
+          <div class="persona-cargo">Mayor General / Comandante Estratégico Operacional de la FANB</div>
+        </div>
+      </div>
+      <div class="persona">
+        <img src="./img/serrano-gotera.jpeg" alt="José Serrano Gotera">
+        <div class="persona-info">
+          <div class="persona-nombre">JOSÉ RAFAEL SERRANO GOTERA</div>
+          <div class="persona-cargo">Mayor General / Viceministro de Servicios para la Defensa</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conector-doble"></div>
+
+    <!-- NIVEL 6: Medrano y Montaño -->
+    <div class="nivel">
+      <div class="persona">
+        <img src="./img/medrano-machado.jpeg" alt="Wilfredo Medrano Machado">
+        <div class="persona-info">
+          <div class="persona-nombre">WILFREDO ALEXANDER MEDRANO MACHADO</div>
+          <div class="persona-cargo">Mayor General / Comandante de la Región Estratégica de Defensa Integral N°06 Guayana</div>
+        </div>
+      </div>
+      <div class="persona">
+        <img src="./img/montano-hernandez.jpeg" alt="Luis Montaño Hernández">
+        <div class="persona-info">
+          <div class="persona-nombre">LUIS GABRIEL MONTAÑO HERNÁNDEZ</div>
+          <div class="persona-cargo">Vicealmirante / Director General de Salud del MPPD</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conector-doble"></div>
+
+    <!-- NIVEL 7: Yilales y Quintana -->
+    <div class="nivel">
+      <div class="persona">
+        <img src="./img/yilales-arteaga.jpeg" alt="Miguel Yilales Arteaga">
+        <div class="persona-info">
+          <div class="persona-nombre">MIGUEL ANTONIO YILALES ARTEAGA</div>
+          <div class="persona-cargo">General de División / Comandante de la Zona Operativa de Defensa Integral N°62 Bolívar</div>
+        </div>
+      </div>
+      <div class="persona">
+        <img src="./img/quintana-isturiz.jpeg" alt="Rafael Quintana Isturiz">
+        <div class="persona-info">
+          <div class="persona-nombre">RAFAEL EMILIO QUINTANA ISTURIZ</div>
+          <div class="persona-cargo">Coronel / Director del Hospital Militar "Dr. Manuel Siverio Castillo"</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer style="background:#001f3f;color:#fff;text-align:center;padding:2rem;margin-top:2rem">
+    <p>© 2026 Hospital Militar Dr. Manuel Siverio Castillo — Excelencia y Disciplina</p>
+  </footer>
+
+</body>
+</html>
